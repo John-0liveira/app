@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
         // Cria uma string com os dados formatados
         const dadosFormatados = `${cnpjValue}, ${eventoValue}, ${dataValue}, ${processoValue}`;
 
-        // Abre uma caixa de diálogo para salvar os dados em um arquivo TXT
-        const blob = new Blob([dadosFormatados], { type: 'text/plain' });
+        // Abre uma caixa de diálogo para salvar os dados em um arquivo TXT (com codificação windows-1252)
+        const blob = new Blob([dadosFormatados], { type: 'text/plain;charset=windows-1252' });
         const a = document.createElement('a');
         a.href = URL.createObjectURL(blob);
         a.download = 'dados.txt';
