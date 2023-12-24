@@ -10,18 +10,6 @@ h1 {
     color: #3498db;
 }
 
-label {
-    display: block;
-    margin: 10px 0;
-}
-
-input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-}
-
 button {
     background-color: #4caf50; /* Cor verde para o botão */
     color: white; /* Texto branco no botão */

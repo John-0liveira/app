@@ -9,25 +9,21 @@
 <body>
     <h1>Meu Aplicativo de Teste</h1>
 
-    <!-- Botão para mostrar as caixas de inserção de texto -->
-    <button id="mostrarFormularioBtn">Desenquadramento em Lote</button>
+    <!-- Caixas de inserção de texto -->
+    <label for="cnpjInput">CNPJ:</label>
+    <input type="text" id="cnpjInput" placeholder="Insira o CNPJ">
 
-    <!-- Formulário para inserção de dados (inicialmente oculto) -->
-    <div id="formulario" style="display: none;">
-        <label for="cnpjInput">CNPJ:</label>
-        <input type="text" id="cnpjInput" placeholder="Insira o CNPJ">
+    <label for="eventoInput">Código do Evento:</label>
+    <input type="text" id="eventoInput" placeholder="Insira o Código do Evento">
 
-        <label for="eventoInput">Código do Evento:</label>
-        <input type="text" id="eventoInput" placeholder="Insira o Código do Evento">
+    <label for="dataInput">Data do Fato Motivador:</label>
+    <input type="text" id="dataInput" placeholder="Insira a Data do Fato Motivador">
 
-        <label for="dataInput">Data do Fato Motivador:</label>
-        <input type="text" id="dataInput" placeholder="Insira a Data do Fato Motivador">
+    <label for="processoInput">Número do Processo:</label>
+    <input type="text" id="processoInput" placeholder="Insira o Número do Processo">
 
-        <label for="processoInput">Número do Processo:</label>
-        <input type="text" id="processoInput" placeholder="Insira o Número do Processo">
-
-        <button id="salvarDadosBtn">Salvar Dados</button>
-    </div>
+    <!-- Botão para salvar os dados -->
+    <button id="salvarDadosBtn">Salvar Dados</button>
 
     <script src="script.js"></script>
 </body>

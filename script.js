@@ -3,13 +3,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Código a ser executado quando o conteúdo da página estiver carregado
 
-    // Adiciona um evento de clique ao botão "Desenquadramento em Lote"
-    const mostrarFormularioBtn = document.getElementById('mostrarFormularioBtn');
-    mostrarFormularioBtn.addEventListener('click', function () {
-        // Mostra o formulário
-        document.getElementById('formulario').style.display = 'block';
-    });
-
     // Adiciona um evento de clique ao botão "Salvar Dados"
     const salvarDadosBtn = document.getElementById('salvarDadosBtn');
     salvarDadosBtn.addEventListener('click', function () {
