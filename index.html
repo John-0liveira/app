@@ -7,23 +7,35 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Meu Aplicativo de Teste</h1>
+    <div id="formulario-container">
+        <h1>Meu Aplicativo de Teste</h1>
 
-    <!-- Caixas de inserção de texto -->
-    <label for="cnpjInput">CNPJ:</label>
-    <input type="text" id="cnpjInput" placeholder="Insira o CNPJ">
+        <!-- Container para as caixas de inserção de texto -->
+        <div class="caixas-container">
+            <div class="caixa">
+                <label for="cnpjInput">CNPJ:</label>
+                <input type="text" id="cnpjInput" placeholder="00.000.000/0000-00">
+            </div>
 
-    <label for="eventoInput">Código do Evento:</label>
-    <input type="text" id="eventoInput" placeholder="Insira o Código do Evento">
+            <div class="caixa">
+                <label for="eventoInput">Código do Evento:</label>
+                <input type="text" id="eventoInput" placeholder="Insira o Código do Evento">
+            </div>
 
-    <label for="dataInput">Data do Fato Motivador:</label>
-    <input type="text" id="dataInput" placeholder="Insira a Data do Fato Motivador">
+            <div class="caixa">
+                <label for="dataInput">Data do Fato Motivador:</label>
+                <input type="text" id="dataInput" placeholder="Insira a Data do Fato Motivador">
+            </div>
 
-    <label for="processoInput">Número do Processo:</label>
-    <input type="text" id="processoInput" placeholder="Insira o Número do Processo">
+            <div class="caixa">
+                <label for="processoInput">Número do Processo:</label>
+                <input type="text" id="processoInput" placeholder="Insira o Número do Processo">
+            </div>
+        </div>
 
-    <!-- Botão para salvar os dados -->
-    <button id="salvarDadosBtn">Salvar Dados</button>
+        <!-- Botão para salvar os dados -->
+        <button id="salvarDadosBtn">Salvar Dados</button>
+    </div>
 
     <script src="script.js"></script>
 </body>

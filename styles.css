@@ -6,8 +6,31 @@ body {
     padding: 50px;
 }
 
+#formulario-container {
+    text-align: center;
+    margin-top: 20px; /* Espaço acima do formulário */
+}
+
 h1 {
     color: #3498db;
+}
+
+/* Container para as caixas de inserção de texto */
+.caixas-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* Estilos para cada caixa de inserção de texto */
+.caixa {
+    width: 10%; /* Ajuste conforme necessário */
+    margin: 5px;
+}
+
+label, input {
+    width: 100%; /* As caixas ocupam toda a largura da .caixa */
+    margin-top: 5px;
 }
 
 button {
@@ -16,9 +39,10 @@ button {
     padding: 10px 20px; /* Espaçamento interno do botão */
     font-size: 16px; /* Tamanho da fonte */
     cursor: pointer; /* Cursor do mouse */
+    margin-top: 20px; /* Espaço acima do botão */
 }
 
-/* Efeitos quando o mouse passa sobre o botão */
+/* Efeito de hover para o botão */
 button:hover {
     background-color: #45a049;
 }
