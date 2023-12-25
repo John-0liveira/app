@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Adiciona um evento de clique ao botão "Salvar Dados"
     const salvarDadosBtn = document.getElementById('salvarDadosBtn');
     salvarDadosBtn.addEventListener('click', function () {
-        let dadosExportar = '';
+        let dadosExportar = '0000000' + ' '.repeat(244) + '\n'; // Cabeçalho adicionado
         const linhas = document.querySelectorAll('.linha');
         for (let index = 0; index < linhas.length; index++) {
             const linha = linhas[index];
@@ -58,11 +58,18 @@ document.addEventListener('DOMContentLoaded', function () {
             dadosExportar += `1${cnpjValueClean}${eventoValue}${dataFormatada}${processoValue}${fraseAdicional}\n`;
         }
     
+        // Adiciona o rodapé aqui
+        const baseRodape = 9000002;
+        const totalLinhas = linhas.length;
+        const numeroRodape = (baseRodape + totalLinhas).toString();
+        const espacosRodape = ' '.repeat(251 - numeroRodape.length);
+        dadosExportar += numeroRodape + espacosRodape + '\n';
+
         const byteArray = new Uint8Array(dadosExportar.length);
         for (let i = 0; i < dadosExportar.length; i++) {
             byteArray[i] = dadosExportar.charCodeAt(i) & 0xff;
         }
-    
+        
         const blob = new Blob([byteArray], { type: 'text/plain' });
         const a = document.createElement('a');
         a.href = URL.createObjectURL(blob);
