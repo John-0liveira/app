@@ -18,6 +18,14 @@ document.addEventListener('DOMContentLoaded', function () {
             const cnpjValue = linha.querySelector(`#${cnpjId}`).value;
             const eventoValue = linha.querySelector(`#${eventoId}`).value;
             const dataValue = linha.querySelector(`#${dataId}`).value;
+
+            // Converter data de dd/mm/aaaa para aaaa/mm/dd
+            const dataParts = dataValue.split('/'); // Dividir a data em partes
+            let dataFormatada = '';
+            if (dataParts.length === 3) {
+                dataFormatada = `${dataParts[2]}${dataParts[1]}${dataParts[0]}`; // Formatar para aaaammdd sem barras
+            }
+
             const processoValue = linha.querySelector(`#${processoId}`).value;
     
             if (!cnpjValue || !eventoValue || !dataValue || !processoValue) {
@@ -25,9 +33,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
             const cnpjValueClean = cnpjValue.replace(/\D/g, ''); // Remove caracteres não numéricos do CNPJ
-            const dataValueClean = dataValue.replace(/\D/g, ''); // Remove caracteres não numéricos da Data
+            
     
-            dadosExportar += `${cnpjValueClean}${eventoValue}${dataValueClean}${processoValue}\n`; // Corrigido
+            dadosExportar += `${cnpjValueClean}${eventoValue}${dataFormatada}${processoValue}\n`; // Usar dataFormatada
         }
     
         const byteArray = new Uint8Array(dadosExportar.length);
