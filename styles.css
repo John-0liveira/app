@@ -16,6 +16,19 @@ h1 {
 }
 
 /* Container para as caixas de inserção de texto */
+.linha {
+    display: flex;
+    align-items: center; /* Alinhar itens verticalmente no centro */
+    margin: 10px 0; /* Adicionar espaçamento entre as linhas */
+}
+
+.numero-linha {
+    width: 5%; /* Largura do indicador de linha */
+    padding-right: 10px; /* Espaçamento à direita do indicador de linha */
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* Estilos para cada caixa de inserção de texto */
 .caixas-container {
     display: flex;
     justify-content: space-around;
@@ -24,7 +37,7 @@ h1 {
 
 /* Estilos para cada caixa de inserção de texto */
 .caixa {
-    width: 10%; /* Ajuste conforme necessário */
+    width: 18%; /* Ajuste conforme necessário */
     margin: 5px;
 }
 
