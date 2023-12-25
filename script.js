@@ -24,8 +24,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 alert('Por favor, preencha todos os campos antes de salvar.');
                 return;
             }
+            const cnpjValueClean = cnpjValue.replace(/\D/g, ''); // Remove caracteres não numéricos do CNPJ
+            const dataValueClean = dataValue.replace(/\D/g, ''); // Remove caracteres não numéricos da Data
     
-            dadosExportar += `${index + 1}, ${cnpjValue}, ${eventoValue}, ${dataValue}, ${processoValue}\n`;
+            dadosExportar += `${cnpjValueClean}${eventoValue}${dataValueClean}${processoValue}\n`; // Corrigido
         }
     
         const byteArray = new Uint8Array(dadosExportar.length);
