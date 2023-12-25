@@ -17,6 +17,26 @@ document.addEventListener('DOMContentLoaded', function () {
     
             const cnpjValue = linha.querySelector(`#${cnpjId}`).value;
             const eventoValue = linha.querySelector(`#${eventoId}`).value;
+
+            let fraseAdicional = '';
+            switch(eventoValue) {
+                case '601':
+                    fraseAdicional = 'Desenquadramento de Ofício do SIMEI - Excesso de receita bruta fora do ano calendário de início de atividades - acima de 20% do limite                                                                  ';
+                    break;
+                case '602':
+                    fraseAdicional = 'Desenquadramento de Ofício do SIMEI - Excesso de receita bruta fora do ano calendário de início de atividades - até 20% do limite                                                                       ';
+                    break;
+                case '603':
+                    fraseAdicional = 'Desenquadramento de Ofício do SIMEI - Excesso de receita bruta no ano calendário de início de atividades - acima de 20% do limite                                                                       ';
+                    break;
+                case '604':
+                    fraseAdicional = 'Desenquadramento de Ofício do SIMEI - Excesso de receita bruta no ano calendário de início de atividades - até 20% do limite                                                                            ';
+                    break;
+                default:
+                    fraseAdicional = ''; // Nenhuma frase adicional para outros valores
+                    break;
+            }
+
             const dataValue = linha.querySelector(`#${dataId}`).value;
 
             // Converter data de dd/mm/aaaa para aaaa/mm/dd
@@ -35,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const cnpjValueClean = cnpjValue.replace(/\D/g, ''); // Remove caracteres não numéricos do CNPJ
             
     
-            dadosExportar += `${cnpjValueClean}${eventoValue}${dataFormatada}${processoValue}\n`; // Usar dataFormatada
+            dadosExportar += `1${cnpjValueClean}${eventoValue}${dataFormatada}${processoValue}${fraseAdicional}\n`;
         }
     
         const byteArray = new Uint8Array(dadosExportar.length);
