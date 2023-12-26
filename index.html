@@ -7,46 +7,50 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="formulario-container">
-        <h1>Meu Aplicativo de Teste</h1>
+    <!-- Início do painel -->
+    <div class="panel">
+        <!-- Título do painel -->
+        <h1>Desenquadramento em Lote</h1>
 
-        <!-- Container para as caixas de inserção de texto -->
-        <div class="linhas-container" id="linhas-container">
-            <!-- Linha inicial -->
-            <div class="linha" id="linha-1">
-                <div class="numero-linha">1</div>
+        <!-- Conteúdo do painel -->
+        <div class="panel-content">
+            <div id="formulario-container">
+                <!-- Container para as caixas de inserção de texto -->
+                <div class="linhas-container" id="linhas-container">
+                    <!-- Linha inicial -->
+                    <div class="linha" id="linha-1">
+                        <div class="numero-linha">1.</div>
 
-                <div class="caixa">
-                    <label for="cnpjInput">CNPJ:</label>
-                    <input type="text" id="cnpjInput" placeholder="00.000.000/0000-00">
+                        <div class="caixa">
+                            <label for="cnpjInput">CNPJ:</label>
+                            <input type="text" id="cnpjInput" placeholder="00.000.000/0000-00">
+                        </div>
+
+                        <div class="caixa">
+                            <label for="eventoInput">Código do Evento:</label>
+                            <input type="text" id="eventoInput">
+                        </div>
+
+                        <div class="caixa">
+                            <label for="dataInput">Data do Fato Motivador:</label>
+                            <input type="text" id="dataInput" placeholder="dd/mm/aaaa">
+                        </div>
+
+                        <div class="caixa">
+                            <label for="processoInput">Número do Processo:</label>
+                            <input type="text" id="processoInput">
+                        </div>
+                    </div>
                 </div>
 
-                <div class="caixa">
-                    <label for="eventoInput">Código do Evento:</label>
-                    <input type="text" id="eventoInput">
-                </div>
-
-                <div class="caixa">
-                    <label for="dataInput">Data do Fato Motivador:</label>
-                    <input type="text" id="dataInput" placeholder="dd/mm/aaaa">
-                </div>
-
-                <div class="caixa">
-                    <label for="processoInput">Número do Processo:</label>
-                    <input type="text" id="processoInput">
-                </div>
+                <!-- Botões -->
+                <button id="adicionarLinhaBtn">Adicionar Linha</button>
+                <button id="removerLinhaBtn">Remover Linha</button>
+                <button id="salvarDadosBtn">Salvar Dados</button>
             </div>
         </div>
-
-        <!-- Botão para adicionar mais linhas -->
-        <button id="adicionarLinhaBtn">Adicionar Linha</button>
-
-        <!-- Adicione o botão de remover linha logo abaixo -->
-        <button id="removerLinhaBtn">Remover Linha</button>
-
-        <!-- Botão para salvar os dados -->
-        <button id="salvarDadosBtn">Salvar Dados</button>
     </div>
+    <!-- Fim do painel -->
 
     <script src="script.js"></script>
 </body>

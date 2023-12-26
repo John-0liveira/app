@@ -1,61 +1,121 @@
 /* styles.css */
 
+:root {
+    --primary-color: hsl(117, 49%, 37%); /* Cor primária */
+    --text-color: hsl(60, 1%, 23%); /* Cor do texto */
+    --background-color: #fcfcfc; /* Cor de fundo */
+    --button-color: hsl(117, 49%, 37%); /* Cor do botão */
+    --button-hover-color: hsl(117, 49%, 47%); /* Cor do botão ao passar o mouse */
+    --background-default-h: 0; /* Exemplo: Hue */
+    --background-default-s: 0%; /* Exemplo: Saturação */
+    --background-default-l: 100%; /* Exemplo: Luminosidade */
+}
+
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 50px;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.panel {
+    background: var(--background-default);
+    border-radius: 8px;
+    box-shadow: 0 0 2px rgba(0,0,0,.15);
+    position: relative;
+    transition: .3s;
+    margin-bottom: 23px;
+    border-bottom: 3px solid hsl(var(--background-default-h), var(--background-default-s), calc(var(--background-default-l) - 25%));
+    margin: 10px; /* Margem uniforme */
+    padding: 0; /* Remova o padding para que o h1 possa se estender até o fim */
+}
+
+.panel-content {
+    padding: 20px;
+    padding-top: 0px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
 }
 
 #formulario-container {
     text-align: center;
-    margin-top: 20px; /* Espaço acima do formulário */
 }
 
 h1 {
-    color: #3498db;
+    text-align: left; /* Alinha o texto à esquerda */
+    margin: 0; /* Remove as margens padrão */
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 10px 20px; /* Ajuste o padding conforme necessário */
+    color: var(--text-color);
+    border-bottom: 1px solid #e0e0e0;
+    text-shadow: -1px 0 var(--text-color);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
-/* Container para as caixas de inserção de texto */
+/* Estilo para as caixas de inserção de texto */
 .linha {
     display: flex;
-    align-items: center; /* Alinhar itens verticalmente no centro */
-    margin: 10px 0; /* Adicionar espaçamento entre as linhas */
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px 0;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    margin-left: 0px;
 }
 
 .numero-linha {
-    width: 5%; /* Largura do indicador de linha */
-    padding-right: 10px; /* Espaçamento à direita do indicador de linha */
-    font-weight: bold; /* Texto em negrito */
-}
-
-/* Estilos para cada caixa de inserção de texto */
-.caixas-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    padding-right: 10px;
+    font-weight: bold;
 }
 
 /* Estilos para cada caixa de inserção de texto */
 .caixa {
-    width: 18%; /* Ajuste conforme necessário */
-    margin: 5px;
+    flex-grow: 1; /* Permite que as caixas cresçam para preencher o espaço disponível */
+    margin: 5px; /* Ajuste as margens conforme necessário */
+    padding: 5px; /* Espaçamento interno para cada caixa */
+    text-align: left; /* Alinha o conteúdo à esquerda */
 }
 
 label, input {
-    width: 100%; /* As caixas ocupam toda a largura da .caixa */
+    width: 100%;
     margin-top: 5px;
+    display: block; /* Garante que o label e o input fiquem um abaixo do outro */
 }
 
+/* Estilo dos rótulos */
+label {
+    font-size: 11px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: var(--text-color);
+    display: block;
+}
+
+/* Estilo das caixas de texto */
+input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilo dos botões */
 button {
-    background-color: #4caf50; /* Cor verde para o botão */
-    color: white; /* Texto branco no botão */
-    padding: 10px 20px; /* Espaçamento interno do botão */
-    font-size: 16px; /* Tamanho da fonte */
-    cursor: pointer; /* Cursor do mouse */
-    margin-top: 20px; /* Espaço acima do botão */
+    background-color: var(--button-color);
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px; /* Ajuste conforme necessário */
 }
 
 /* Efeito de hover para o botão */
 button:hover {
-    background-color: #45a049;
+    background-color: var(--button-hover-color);
 }

@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
         novaLinha.className = 'linha';
         const novaLinhaNumero = ++numeroLinha;
         novaLinha.innerHTML = `
-            <div class="numero-linha">${novaLinhaNumero}</div>
+            <div class="numero-linha">${novaLinhaNumero}.</div>
             <div class="caixa">
                 <label for="cnpjInput${novaLinhaNumero}">CNPJ:</label>
                 <input type="text" id="cnpjInput${novaLinhaNumero}" placeholder="00.000.000/0000-00">
