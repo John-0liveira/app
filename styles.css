@@ -70,10 +70,9 @@ body {
 }
 
 .panel-content {
-    padding: 20px;
     padding-top: 0px;
     padding-right: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     padding-left: 20px;
 }
 
@@ -87,7 +86,7 @@ h1 {
     display: block;
     font-weight: 500;
     font-size: 14px;
-    padding: 10px 20px; /* Ajuste o padding conforme necessário */
+    padding: 12px 20px; /* Ajuste o padding conforme necessário */
     color: var(--text-color);
     border-bottom: 1px solid #e0e0e0;
     text-shadow: -1px 0 var(--text-color);
@@ -103,7 +102,7 @@ h1 {
     margin: 10px 0;
     margin-top: 0px;
     margin-right: 0px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     margin-left: 0px;
 }
 
@@ -146,7 +145,7 @@ input[type="text"] {
 button {
     background-color: var(--button-color);
     color: white;
-    padding: 10px 20px;
+    padding: 7px 10px;
     font-size: 12px;
     cursor: pointer;
     border: none;
