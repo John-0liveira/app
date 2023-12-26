@@ -17,6 +17,43 @@ body {
     line-height: 1.42857143;
     color: var(--text-color);
     background-color: var(--background-color);
+    padding-top: 62px; 
+}
+
+.header {
+    padding: 10px;
+    text-align: center;
+    border-top: 6px solid hsl(117, 49%, 37%);
+    box-shadow: 0 3px 6px rgba(0,0,0,.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Garante que o cabeçalho fique sobre os outros elementos */
+    font-size: 9px;
+    font-weight: 700;
+    color: var(--text-color);
+    cursor: pointer;
+    height: 38px;
+}
+
+.footer {
+    display: flex; /* Usa Flexbox para alinhar os itens */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 -3px 6px rgba(0,0,0,.05); /* Inverte a direção da sombra */
+    position: fixed;
+    bottom: 0; /* Alinha o rodapé na parte inferior da página */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Mantém o rodapé sobre outros elementos */
+    font-size: 9px;
+    font-weight: 700;
+    color: var(--text-color);
+    cursor: pointer;
+    height: 20px; /* Altura do rodapé */
 }
 
 .panel {
@@ -25,6 +62,7 @@ body {
     box-shadow: 0 0 2px rgba(0,0,0,.15);
     position: relative;
     transition: .3s;
+    margin-top: 60px;
     margin-bottom: 23px;
     border-bottom: 3px solid hsl(var(--background-default-h), var(--background-default-s), calc(var(--background-default-l) - 25%));
     margin: 10px; /* Margem uniforme */
@@ -109,10 +147,11 @@ button {
     background-color: var(--button-color);
     color: white;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 12px;
     cursor: pointer;
     border: none;
     border-radius: 4px; /* Ajuste conforme necessário */
+    font-weight: 700;
 }
 
 /* Efeito de hover para o botão */
