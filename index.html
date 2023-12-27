@@ -9,48 +9,36 @@
 <body>
     <!-- Cabeçalho -->
     <div class="header">
-        <!-- Conteúdo do cabeçalho (adicione conforme necessário) -->
         <h2>MUNICÍPIO DE PALMEIRA</h2>
     </div>
 
     <!-- Início do painel -->
     <div class="panel">
-        <!-- Título do painel -->
         <h1>Desenquadramento em Lote</h1>
-
-        <!-- Conteúdo do painel -->
         <div class="panel-content">
             <div id="formulario-container">
-                <!-- Container para as caixas de inserção de texto -->
                 <div class="linhas-container" id="linhas-container">
-                    <!-- Linha inicial -->
                     <div class="linha" id="linha-1">
                         <div class="numero-linha">1.</div>
-
-                        <div class="caixa">
+                        <div class="caixa caixa-cnpj">
                             <label for="cnpjInput">CNPJ:</label>
                             <input type="text" id="cnpjInput" placeholder="00.000.000/0000-00">
                         </div>
-
-                        <div class="caixa">
+                        <div class="caixa caixa-evento">
                             <label for="eventoInput">Código do Evento:</label>
                             <input type="text" id="eventoInput">
                         </div>
-
-                        <div class="caixa">
+                        <div class="caixa caixa-data">
                             <label for="dataInput">Data do Fato Motivador:</label>
                             <input type="text" id="dataInput" placeholder="dd/mm/aaaa">
                         </div>
-
-                        <div class="caixa">
+                        <div class="caixa caixa-processo">
                             <label for="processoInput">Número do Processo:</label>
                             <input type="text" id="processoInput">
                         </div>
                     </div>
                     <!-- Adicione mais linhas conforme necessário -->
                 </div>
-
-                <!-- Botões -->
                 <button id="adicionarLinhaBtn">ADICIONAR LINHA</button>
                 <button id="removerLinhaBtn">REMOVER LINHA</button>
             </div>
@@ -60,7 +48,6 @@
 
     <!-- Rodapé -->
     <div class="footer">
-        <!-- Conteúdo do rodapé (adicione conforme necessário) -->
         <button id="salvarDadosBtn">GERAR ARQUIVO</button>
     </div>
 

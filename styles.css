@@ -107,15 +107,19 @@ h1 {
 }
 
 .numero-linha {
-    padding-right: 10px;
     font-weight: bold;
+    /*align-self: center; /* Alinha verticalmente ao centro - altere conforme necessário */
+    margin-top: 30px; */ /* Descomente e ajuste este valor para posicionar manualmente */
 }
 
 /* Estilos para cada caixa de inserção de texto */
 .caixa {
     flex-grow: 1; /* Permite que as caixas cresçam para preencher o espaço disponível */
-    margin: 5px; /* Ajuste as margens conforme necessário */
-    padding: 5px; /* Espaçamento interno para cada caixa */
+    margin: 5px 10px; /* Ajusta as margens horizontal e vertical */
+    padding-top: 0px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    padding-left: 20px;
     text-align: left; /* Alinha o conteúdo à esquerda */
 }
 
@@ -139,6 +143,7 @@ input[type="text"] {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    height: 8px; /* Ajuste a altura conforme necessário */
 }
 
 /* Estilo dos botões */
@@ -151,6 +156,7 @@ button {
     border: none;
     border-radius: 4px; /* Ajuste conforme necessário */
     font-weight: 700;
+    margin-right: 20px;
 }
 
 /* Efeito de hover para o botão */
