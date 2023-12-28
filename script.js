@@ -66,8 +66,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 linha.querySelector(`#${cnpjId}`).classList.add('erro');
                 return;
             }          
-            if (eventoValue.length !== 3) {
-                alert('Erro na linha ' + (index + 1) + ': O código do evento deve conter 3 dígitos.');
+            if (!["601", "602", "603", "604"].includes(eventoValue)) {
+                alert('Erro na linha ' + (index + 1) + ': O código do evento deve ser 601, 602, 603 ou 604.');
                 linha.querySelector(`#${eventoId}`).classList.add('erro');
                 return;
             }
