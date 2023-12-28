@@ -52,6 +52,26 @@ document.addEventListener('DOMContentLoaded', function () {
                 alert('Por favor, preencha todos os campos antes de salvar.');
                 return;
             }
+
+                        // Insira as novas verificações aqui
+            if (cnpjValue.replace(/\D/g, '').length !== 14) {
+                alert('O CNPJ deve conter 14 dígitos.');
+                return;
+            }
+            if (eventoValue.length !== 3) {
+                alert('O código do evento deve conter 3 dígitos.');
+                return;
+            }
+            if (dataValue.replace(/\D/g, '').length !== 8) {
+                alert('A data deve conter 8 dígitos no formato dd/mm/aaaa.');
+                return;
+            }
+            if (processoValue.length !== 25) {
+                alert('O número do processo deve conter 25 caracteres.');
+                return;
+            }
+
+
             const cnpjValueClean = cnpjValue.replace(/\D/g, ''); // Remove caracteres não numéricos do CNPJ
             
     
