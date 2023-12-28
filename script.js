@@ -216,6 +216,10 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById(`processoInput${novaLinhaNumero}`).addEventListener('input', function() {
             this.value = this.value.substr(0, 25);
         });
+
+        setTimeout(() => {
+            window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: 'smooth' });
+        }, 50); // O atraso de 100ms pode ajudar a garantir que a nova linha seja renderizada
     }
 
     function removerLinha() {

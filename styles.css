@@ -20,6 +20,10 @@ body {
     padding-top: 62px;
 }
 
+.header, .footer {
+    background-color: #FFFFFF;
+}
+
 .header {
     padding: 10px;
     text-align: center;
@@ -62,10 +66,12 @@ body {
     box-shadow: 0 0 2px rgba(0,0,0,.15);
     position: relative;
     transition: .3s;
-    margin-top: 60px;
-    margin-bottom: 23px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
     border-bottom: 3px solid hsl(var(--background-default-h), var(--background-default-s), calc(var(--background-default-l) - 25%));
-    margin: 10px; /* Margem uniforme */
+    /*margin: 10px; /* Margem uniforme */
     padding: 0; /* Remova o padding para que o h1 possa se estender até o fim */
 }
 
