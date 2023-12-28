@@ -1,5 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Código a ser executado quando o conteúdo da página estiver carregado
+   
+    function limparErros() {
+        document.querySelectorAll('.caixa input').forEach(function(input) {
+            input.classList.remove('erro');
+        });
+    }
 
     let numeroLinha = 1; // Inicializa o indicador de linha
 
@@ -8,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     salvarDadosBtn.addEventListener('click', function () {
         let dadosExportar = '0000000' + ' '.repeat(244) + '\n'; // Cabeçalho adicionado
         const linhas = document.querySelectorAll('.linha');
+        limparErros();
         for (let index = 0; index < linhas.length; index++) {
             const linha = linhas[index];
             const cnpjId = index === 0 ? 'cnpjInput' : `cnpjInput${index + 1}`;
@@ -55,22 +62,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         // Insira as novas verificações aqui
             if (cnpjValue.replace(/\D/g, '').length !== 14) {
-                alert('O CNPJ deve conter 14 dígitos.');
+                alert('Erro na linha ' + (index + 1) + ': O CNPJ deve conter 14 dígitos.');
+                linha.querySelector(`#${cnpjId}`).classList.add('erro');
                 return;
-            }
+            }          
             if (eventoValue.length !== 3) {
-                alert('O código do evento deve conter 3 dígitos.');
+                alert('Erro na linha ' + (index + 1) + ': O código do evento deve conter 3 dígitos.');
+                linha.querySelector(`#${eventoId}`).classList.add('erro');
                 return;
             }
             if (dataValue.replace(/\D/g, '').length !== 8) {
-                alert('A data deve conter 8 dígitos no formato dd/mm/aaaa.');
+                alert('Erro na linha ' + (index + 1) + ': A data deve conter 8 dígitos no formato dd/mm/aaaa.');
+                linha.querySelector(`#${dataId}`).classList.add('erro');
                 return;
             }
             if (processoValue.length !== 25) {
-                alert('O número do processo deve conter 25 caracteres.');
+                alert('Erro na linha ' + (index + 1) + ': O número do processo deve conter 25 caracteres.');
+                linha.querySelector(`#${processoId}`).classList.add('erro');
                 return;
             }
-
 
             const cnpjValueClean = cnpjValue.replace(/\D/g, ''); // Remove caracteres não numéricos do CNPJ
             

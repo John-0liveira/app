@@ -17,7 +17,7 @@ body {
     line-height: 1.42857143;
     color: var(--text-color);
     background-color: var(--background-color);
-    padding-top: 62px; 
+    padding-top: 62px;
 }
 
 .header {
@@ -162,4 +162,8 @@ button {
 /* Efeito de hover para o botão */
 button:hover {
     background-color: var(--button-hover-color);
+}
+
+input.erro {
+    border-color: red;
 }
